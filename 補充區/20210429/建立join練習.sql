@@ -1,0 +1,20 @@
+CREATE TABLE `table1` (
+  `id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `table1` (`id`) VALUES
+(210),
+(211),
+(212),
+(213);
+
+CREATE TABLE `table2` (
+  `id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `table2` (`id`) VALUES
+(210),
+(214),
+(215),
+(212),
+(212);

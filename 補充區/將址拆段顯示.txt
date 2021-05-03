@@ -1,0 +1,4 @@
+SELECT cName AS '姓名',SUBSTRING(cAddr,1,INSTR(cAddr,'市')) AS '城市' FROM students
+
+SELECT cName AS '姓名',SUBSTRING(cAddr,1,INSTR(cAddr,'市')) AS '城市' , SUBSTRING(cAddr,4,INSTR(cAddr,'路')-3) FROM students
+SELECT cName AS '姓名',SUBSTRING(cAddr,1,INSTR(cAddr,'市')) AS '城市' , SUBSTRING(cAddr,INSTR(cAddr,'市')+1,INSTR(cAddr,'路')-3) AS '路名' FROM students

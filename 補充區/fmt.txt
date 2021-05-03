@@ -1,0 +1,5 @@
+{
+	"version": 1,
+	"php_bin":"C:/wamp64/bin/php/php7.3.12/php.exe",
+	"format_on_save":false,
+}

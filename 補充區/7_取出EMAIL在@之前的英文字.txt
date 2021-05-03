@@ -1,0 +1,1 @@
+SELECT CONCAT(cName,'(',SUBSTRING(cEmail,1,INSTR(cEmail,'@')-1),')') FROM students

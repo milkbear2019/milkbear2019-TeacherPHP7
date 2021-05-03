@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		
+		{
+			"path": "C:\\wamp64\\www"
+		}
+	],
+	"settings":
+	{
+		"sublime-view-in-browser":
+		{
+			"basePath": "C:\\wamp64\\www",
+			"baseUrl": "http://localhost"
+		}
+	}
+}
