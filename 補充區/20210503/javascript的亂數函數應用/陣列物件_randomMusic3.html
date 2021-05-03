@@ -1,0 +1,58 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h2 align=center>自動點歌機（利用亂數點選 MP3 音樂）</h2>
+        <hr>
+        <script>
+        midiFile = new Array();
+        songName = new Array();
+        singerName = new Array();
+        i = 0;
+        midiFile[i] = "music/mp3/canon.mp3";
+        songName[i] = "Canon";
+        singerName[i] = "鋼琴版";
+        i++;
+        midiFile[i] = "music/mp3/WingsOfPaino.mp3";
+        songName[i] = "Wings Of Paino";
+        singerName[i] = "V.K";
+        i++;
+        midiFile[i] = "music/mp3/december.mp3";
+        songName[i] = "December";
+        singerName[i] = "George Winston";
+        i++;
+        midiFile[i] = "music/mp3/LongingLove.mp3";
+        songName[i] = "Longing Love";
+        singerName[i] = "George Winston";
+        i++;
+        midiFile[i] = "music/mp3/spirited_away.mp3";
+        songName[i] = "神影少女插曲";
+        singerName[i] = "Joe Hisaishi";
+        index = Math.floor(Math.random() * midiFile.length);
+        pickedMidi = midiFile[index];
+        pickedSongName = songName[index];
+        pickedSingerName = singerName[index];
+    document.writeln("<audio controls autoplay src="+pickedMidi+" type=audio/mpeg> </audio>" );
+    //document.writeln("<embed src="+pickedMidi+" hidden=false autostart=true loop=false type='audio/midi'>");
+    // <audio src="Sonic Generations [OST] - Rooftop Run (Modern).mp3" controls autoplay loop>
+        </script>
+        
+        <p align=center>
+            <script>
+            document.write("你現在聽到的歌是<font color=green>『" + pickedSingerName + "』</font>的");
+            document.write("『<font color=red>" + pickedSongName + "</font>』");
+            </script>
+            <p>
+                所有的歌：
+                <blockquote>
+                    <script>
+                    for (var i = 0; i < midiFile.length; i++) {
+                    document.write("<font color=green>" + singerName[i] + "</font>：");
+                    document.write("<font color=red>" + songName[i] + "</font>");
+                    document.write(" (<a href=" + midiFile[i] + ">" + midiFile[i] + "</a>)<br>");
+                    }
+                    </script>
+                </blockquote>
+                <hr>
+            </body>
+        </html>
