@@ -8,5 +8,10 @@
 	$callTest = "testfun1";
 	$callTest();
 	$callTest = "testfun2";
-	$callTest();
+	//$callTest();
+	if(function_exists($callTest)){
+		echo "存在".$callTest;
+	}else {
+		echo "不存在".$callTest;
+	}
 ?>
