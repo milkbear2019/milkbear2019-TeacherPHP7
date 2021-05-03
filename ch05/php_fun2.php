@@ -4,5 +4,7 @@
 	}
 	showName("David");
 	showName("Lily");
+	showName(123456);
+	showName("123456");
 ?>
 	
