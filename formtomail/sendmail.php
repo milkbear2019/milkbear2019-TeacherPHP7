@@ -134,26 +134,26 @@ function YY_checkform() { //v4.66
       <table width="100%" border="0" cellpadding="5" cellspacing="0">
           <tr>
             <td width="60"><strong> 寄件者</strong></td>
-            <td>&nbsp;</td>
+            <td><?php echo $_POST['mailfrom'];?></td>
           </tr>
           <tr>
             <td><strong> 收件者</strong></td>
-            <td>&nbsp;</td>
+            <td><?php echo $_POST['mailto'];?></td>
           </tr>
           <tr>
             <td><strong> 副本</strong></td>
-            <td>&nbsp;</td>
+            <td><?php echo $_POST['mailcc'];?></td>
           </tr>
           <tr>
             <td><strong> 密件副本</strong></td>
-            <td>&nbsp;</td>
+            <td><?php echo $_POST['mailbcc'];?></td>
           </tr>
           <tr>
             <td><strong>主旨</strong></td>
-            <td>&nbsp;</td>
+            <td><?php echo $_POST['mailsubject'];?></td>
           </tr>
           <tr>
-            <td colspan="2">&nbsp;</td>
+            <td colspan="2"><?php echo nl2br($_POST['mailcontent']);?></td>
           </tr>
           <tr>
             <td colspan="2" align="center"><input type="button" name="button2" id="button2" value="再寄一封" onclick="window.history.back();"></td>

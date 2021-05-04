@@ -22,6 +22,7 @@
         $mail->From = "milkbear2016@gmail.com"; //寄件者信箱
         $mail->FromName = "牛奶熊"; //寄件者姓名
         $mail->AddAddress("bearshushin@gmail.com", "熊心天下"); //收件人郵件和名稱
+        // $mail->AddCC('milkbear2017@gmail.com'); //設定 副本收件人
         // $mail->AddBCC('milkbear2017@gmail.com'); //設定 密件副本收件人
         
         $mail->IsHTML(true); //郵件內容為html
