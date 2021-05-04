@@ -7,6 +7,7 @@
 </head>
     <body>
         <?php
+        error_reporting(E_ALL ^ E_DEPRECATED ^ E_NOTICE);//顯示錯誤訊息的型別
         require_once('PHPMailer/PHPMailerAutoload.php'); //引入phpMailer 記得將路徑換成您自己的path
         $mail= new PHPMailer(); //初始化一個PHPMailer物件
         $mail->Host = "smtp.gmail.com"; //SMTP主機 (這邊以gmail為例，所以填寫gmail stmp)
