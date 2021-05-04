@@ -1,39 +1,40 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <metacharset = utf-8>
-        <title>µL¼ÐÃD¤å¥ó</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>å¯„å›ºå®šä¿¡ä»¶</title>
+</head>
     <body>
         <?php
-        require_once('PHPMailer/PHPMailerAutoload.php'); //¤Þ¤JphpMailer °O±o±N¸ô®|´«¦¨±z¦Û¤vªºpath
-        $mail= new PHPMailer(); //ªì©l¤Æ¤@­ÓPHPMailerª«¥ó
-        $mail->Host = "smtp.gmail.com"; //SMTP¥D¾÷ (³oÃä¥Hgmail¬°¨Ò¡A©Ò¥H¶ñ¼ggmail stmp)
-        $mail->IsSMTP(); //³]©w¨Ï¥ÎSMTP¤è¦¡±H«H
-        $mail->SMTPAuth = true; //±Ò¥ÎSMTPÅçÃÒ¼Ò¦¡
-        $mail->Username = "milkbear2016@gmail.com"; //±zªº gamil ±b¸¹
-        $mail->Password = "XXXXXXXX"; //±zªº gmail ±K½X
-        $mail->SMTPSecure = "ssl"; // SSL³s½u (­n¨Ï¥Îgmail stmp»Ý­n³]©wssl¼Ò¦¡)
-        $mail->Port = 465; //GamilªºSMTP¥D¾÷ªºport(Gmail¬°465)¡C
-        $mail->CharSet = "utf-8"; //¶l¥ó½s½X
+        require_once('PHPMailer/PHPMailerAutoload.php'); //å¼•å…¥phpMailer è¨˜å¾—å°‡è·¯å¾‘æ›æˆæ‚¨è‡ªå·±çš„path
+        $mail= new PHPMailer(); //åˆå§‹åŒ–ä¸€å€‹PHPMailerç‰©ä»¶
+        $mail->Host = "smtp.gmail.com"; //SMTPä¸»æ©Ÿ (é€™é‚Šä»¥gmailç‚ºä¾‹ï¼Œæ‰€ä»¥å¡«å¯«gmail stmp)
+        $mail->IsSMTP(); //è¨­å®šä½¿ç”¨SMTPæ–¹å¼å¯„ä¿¡
+        $mail->SMTPAuth = true; //å•Ÿç”¨SMTPé©—è­‰æ¨¡å¼
+        $mail->Username = "milkbear2016@gmail.com"; //æ‚¨çš„ gamil å¸³è™Ÿ
+        $mail->Password = ""; //æ‚¨çš„ gmail å¯†ç¢¼
+        $mail->SMTPSecure = "ssl"; // SSLé€£ç·š (è¦ä½¿ç”¨gmail stmpéœ€è¦è¨­å®šsslæ¨¡å¼)
+        $mail->Port = 465; //Gamilçš„SMTPä¸»æ©Ÿçš„port(Gmailç‚º465)ã€‚
+        $mail->CharSet = "utf-8"; //éƒµä»¶ç·¨ç¢¼
         
-        $mail->From = "milkbear2016@gmail.com"; //±H¥óªÌ«H½c
-        $mail->FromName = "¤û¥¤ºµ"; //±H¥óªÌ©m¦W
-        $mail->AddAddress("bearshushin@gmail.com", "ºµ¤ß¤Ñ¤U"); //¦¬¥ó¤H¶l¥ó©M¦WºÙ
-        // $mail->AddCC('milkbear2017@gmail.com'); //³]©w °Æ¥»¦¬¥ó¤H
-        // $mail->AddBCC('milkbear2017@gmail.com'); //³]©w ±K¥ó°Æ¥»¦¬¥ó¤H
+        $mail->From = "milkbear2016@gmail.com"; //å¯„ä»¶è€…ä¿¡ç®±
+        $mail->FromName = "ç‰›å¥¶ç†Š"; //å¯„ä»¶è€…å§“å
+        $mail->AddAddress("bearshushin@gmail.com", "ç†Šå¿ƒå¤©ä¸‹"); //æ”¶ä»¶äººéƒµä»¶å’Œåç¨±
+        // $mail->AddBCC('milkbear2017@gmail.com'); //è¨­å®š å¯†ä»¶å‰¯æœ¬æ”¶ä»¶äºº
         
-        $mail->IsHTML(true); //¶l¥ó¤º®e¬°html
-        // $mail->addAttachment('/tmp/image.jpg', 'new.jpg'); //²K¥[ªþ¥ó(­Y¤£»Ý­n«hµù¸Ñ±¼´N¦n)
+        $mail->IsHTML(true); //éƒµä»¶å…§å®¹ç‚ºhtml
+        // $mail->addAttachment('/tmp/image.jpg', 'new.jpg'); //æ·»åŠ é™„ä»¶(è‹¥ä¸éœ€è¦å‰‡è¨»è§£æŽ‰å°±å¥½)
         
-        $mail->Subject = "´ú¸Õ¶l¥ó3"; //¶l¥ó¼ÐÃD
-        $mail->Body ="¤º®e-´ú¸Õtest123"; //¶l¥ó¤º®e
-        $mail->AltBody = '·í¦¬¥ó¤Hªº¹q¤l«H½c¤£¤ä´©html®É¡A·|Åã¥Ü³o¦ê~~';
+        $mail->Subject = "æ¸¬è©¦éƒµä»¶3"; //éƒµä»¶æ¨™é¡Œ
+        $mail->Body ="å…§å®¹-æ¸¬è©¦test123"; //éƒµä»¶å…§å®¹
+        $mail->AltBody = 'ç•¶æ”¶ä»¶äººçš„é›»å­ä¿¡ç®±ä¸æ”¯æ´htmlæ™‚ï¼Œæœƒé¡¯ç¤ºé€™ä¸²~~';
         
         if(!$mail->send()) {
-        echo '«H¥óµo°e¥¢±Ñ!!';
+        echo 'ä¿¡ä»¶ç™¼é€å¤±æ•—!!';
         echo 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
-        echo '«H¥ó¤wµo°e!!';
+        echo 'ä¿¡ä»¶å·²ç™¼é€!!';
         }
         ?>
     </body>
