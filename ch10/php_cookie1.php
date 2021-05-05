@@ -1,19 +1,19 @@
 <?php
-$setResult=setcookie("TestCookie", "³o¬OCookieªº¤º®e");
+$setResult = setcookie("TestCookie", "é€™æ˜¯Cookieçš„å…§å®¹");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Cookie ¦s¨ú´ú¸Õ</title>
+	<title>Cookie å­˜å–æ¸¬è©¦</title>
 </head>
 <body>
 <?php
-if($setResult){
-	if(isset($_COOKIE["TestCookie"])){
-		echo "Cookieªº¤º®e¬°¡G".$_COOKIE["TestCookie"];
-	}else{
-		echo "Cookie Àx¦s¦¨¥\¡A½Ð­«¾ã­¶­±Åã¥Ü!";
+if ($setResult) {
+	if (isset($_COOKIE["TestCookie"])) {
+		echo "Cookieçš„å…§å®¹ç‚ºï¼š" . $_COOKIE["TestCookie"];
+	} else {
+		echo "Cookie å„²å­˜æˆåŠŸï¼Œè«‹é‡æ•´é é¢é¡¯ç¤º!";
 	}
 }
 ?>
