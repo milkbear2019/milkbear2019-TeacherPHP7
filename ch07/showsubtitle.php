@@ -25,7 +25,13 @@ HOMIES SOFT BAR酒吧昨也暫停營業，周邊住戶說，酒吧晚上七時�
 Msg;
 		$showCharNum = 50;//設定所要顯示的字數
   		$showstr = mb_substr($news,0,$showCharNum,"utf-8");//在$news變數中顯示設定的字數
-  		echo $showstr."...(詳全文)";
+  		//echo $showstr."...(<a href='showsubtitle.php?showall=1'>詳全文</a>)";
+  		echo $showstr."...(<a href='showsubtitle.php?showall=1'>詳全文</a>)";
+  		if(isset($_GET['showall']))//判斷是否要顯示$news的內容
+  		{
+  		 echo "<br><h1>本文內容</h1><hr>";
+  		 echo $news;//顯示$news的內容
+  		}
 	?>
 </body>
 </html>
