@@ -1,6 +1,7 @@
 <?php
 if(isset($_POST["passwd"]) && $_POST["passwd"]!=""){
 	$passStr = md5("abcd1234");	
+	echo $passStr;
 	$inputStr = $_POST["passwd"];
 	if(md5($inputStr)==$passStr){
 		echo "密碼 $inputStr 驗證通過<br>";

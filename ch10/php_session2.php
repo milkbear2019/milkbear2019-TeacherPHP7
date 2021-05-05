@@ -62,6 +62,9 @@ if(!isset($_SESSION["membername"]) || ($_SESSION["membername"]=="")){
   <tr>
     <td align="center" bgcolor="#CCCCCC"><a href="php_session2.php?logout=true">登出系統</a></td>
   </tr>
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><a href="php_session3.php?">前往session3.php</a></td>
+  </tr>
 </table>
 <?php }?>
 </body>

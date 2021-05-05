@@ -32,6 +32,7 @@ Msg;
   		 echo "<br><h1>本文內容</h1><hr>";
   		 echo $news;//顯示$news的內容
   		}
+  		echo "<br>".strtolower("AAAAA");
 	?>
 </body>
 </html>
