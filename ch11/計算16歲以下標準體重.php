@@ -20,5 +20,5 @@ class People {
 }
 $data = new People();
 $data->setData("James", "男", 15, 160, 50);
-echo "年紀 " . $data->int_Age . "歲的標準體重應為 " . $data->calcWeight() . "公斤";
+echo $data->str_Name." 年紀是 " . $data->int_Age . "歲的標準體重應為 " . $data->calcWeight() . "公斤";
 ?>

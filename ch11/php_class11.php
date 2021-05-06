@@ -2,9 +2,9 @@
 class People{ 
 	public $str_Name;			//姓名
 	public $str_Sex;			//性別
-	protected $int_Age;			//年齡
-	protected $int_Weight;		//體重
-	protected $int_Height;		//身高
+	public $int_Age;			//年齡
+	public $int_Weight;		//體重
+	public $int_Height;		//身高
 	
 	public function setData($Name,$Sex,$Age,$Height,$Weight){
 		$this->str_Name = $Name;
