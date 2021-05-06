@@ -28,7 +28,7 @@ class Student {
 $stdObject1 = new Student();
 $stdObject1->setData(1,"David","男",92,85,80);
 $stdObject1->showData();
-$stdObject2 = new Student;
-$stdObject2->setData(2,"Lily","女",87,90,76);
-$stdObject2->showData();
+//$stdObject2 = new Student;
+$stdObject1->setData(2,"Lily","女",87,90,76);
+$stdObject1->showData();
 ?>

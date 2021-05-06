@@ -65,7 +65,7 @@ $stmt->fetch();
                   <input name="boardid" type="hidden" id="boardid" value="<?php echo $boardid;?>">
                   <input name="action" type="hidden" id="action" value="delete">
                   <input type="submit" name="button" id="button" value="確定刪除資料">
-                  <input type="button" name="button3" id="button3" value="回上一頁" onClick="window.history.back();">
+                  <input type="button" name="button3" id="button3" value="回上一頁" onClick="javascript:window.history.back();">
                 </p></td>
             </tr>
           </table>

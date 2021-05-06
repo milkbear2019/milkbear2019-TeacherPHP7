@@ -16,8 +16,7 @@ class Student {
 		echo "數學成績：".$this->int_Maths."<br />";
 	}
 } 
-
-$stdObject1 = new Student();
+$stdObject1 = new Student();//新增一個Student類別的物件名字為$stdObject1
 $stdObject1->int_Id=1;
 $stdObject1->str_Name="David";
 $stdObject1->str_Sex="男";

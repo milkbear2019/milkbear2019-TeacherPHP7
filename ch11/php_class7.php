@@ -6,8 +6,10 @@ class Student {
 	public $int_Chinese;	//國文成績
 	public $int_English;	//英語成績
 	public $int_Maths;		//數學成績
-	private $total_scores;	//總成績
-	private $average_scores;	//平均分數 
+	//private $total_scores;	//總成績
+	//private $average_scores;	//平均分數 
+	public $total_scores;	//總成績
+	public $average_scores;	//平均分數 	
 	
 	private function totalScores(){
 		return $this->int_Chinese + $this->int_English + $this->int_Maths;

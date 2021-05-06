@@ -34,7 +34,7 @@ class Student {
 $stdObject1 = new Student("David");
 $stdObject1->setData(1,"David","男",92,85,80);
 $stdObject1->showData();
-$stdObject1 = NULL;
+$stdObject1 = NULL;//清空物件
 $stdObject2 = new Student("Lily");
 $stdObject2->setData(2,"Lily","女",87,90,76);
 $stdObject2->showData();
