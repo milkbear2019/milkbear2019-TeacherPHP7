@@ -4,7 +4,7 @@
 	$sql_query = "SELECT * FROM students";
 	$result = $db_link->query($sql_query);
 	
-	echo "全班同學人數為：".$result->num_rows;
+	echo "全班同學人數為：".$db_link->num_rows;
 	
 	$db_link->close();
 ?>

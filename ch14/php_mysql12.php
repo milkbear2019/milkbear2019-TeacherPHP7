@@ -5,6 +5,7 @@
 	if ($result = $db_link->query("SELECT DATABASE()")) {
 	    $row = $result->fetch_row();
 	    printf("目前連接的資料庫是「%s」<br>", $row[0]);
+	    //echo "目前連接的資料庫是".$row[0]."<br>";
 	    $result->close();
 	}
 	/* change db to world db */
