@@ -47,7 +47,7 @@
 						echo "<td>".$value."</td>";
 						
 					}
-					echo "<td><a href='update.php?id=".$row_result["cID"]."'>修改</a> ";
+					echo "<td><a href='update.php?id=".$row_result["cID"]."'>修改</a>";
 					echo "<a href='delete.php?id=".$row_result["cID"]."'>刪除</a></td>";
 					echo "</tr>";
 				}
