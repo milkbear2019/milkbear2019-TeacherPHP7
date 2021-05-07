@@ -1,8 +1,8 @@
 <?php
 	//資料庫主機設定
-	$db_host = "localhost";
+	$db_host = "localhost:3308";
 	$db_username = "root";
-	$db_password = "1234";
+	$db_password = "";
 	$db_name = "class";
 	//錯誤處理
 	try{

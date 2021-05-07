@@ -1,7 +1,8 @@
 ﻿<?php 
 	header("Content-Type: text/html; charset=utf-8");
 	include("connMysqlObj.php");
-	$sex = "M";	$id = ;
+
+	$sex = "M";	$id = 5;
 	$sql_query="SELECT cID, cName, cEmail, cPhone FROM students WHERE cSex = ? AND cID <= ?";
 	if ($stmt = $db_link->prepare($sql_query)) {
 		$stmt->bind_param("si", $sex, $id);
@@ -11,6 +12,5 @@
 	        echo "座號：{$col1}<br>姓名：{$col2}<br>電子郵件：{$col3}<br>電話：{$col4}<hr>";
 	    }
 	    $stmt->close();
-	}else{echo "沒有符合的資料";}
-	$db_link->close();
+	
 ?>
