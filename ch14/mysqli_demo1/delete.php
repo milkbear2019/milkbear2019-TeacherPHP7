@@ -61,11 +61,13 @@
       <td colspan="2" align="center">
       <input name="cID" type="hidden" value="<?php echo $cid;?>">
       <input name="action" type="hidden" value="delete">
-      <input type="submit" name="button" id="button" value="確定刪除這筆資料嗎？">
+      <input type="submit" name="button" id="button" value="確定刪除這筆資料嗎？" onclick="return confirm('是否確認刪除這筆資料');">
+      <input type="button" name="button1" id="button1" value="回上一頁" onclick="history.go(-1);">
       </td>
     </tr>
   </table>
 </form>
+
 </body>
 </html>
 <?php 
