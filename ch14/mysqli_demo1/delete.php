@@ -1,9 +1,10 @@
 <?php 
 	include("connMysqlObj.php");
-	if(isset($_POST["action"])&&($_POST["action"]=="delete")){	
+	if(isset($_POST["action"])&&($_POST["action"]=="delete")){//如果按下"確定刪除這筆資料嗎？"按鈕則執行下列的DELETE FROM SQL指令
 		$sql_query = "DELETE FROM students WHERE cID=?";
 		$stmt = $db_link -> prepare($sql_query);
-		$stmt -> bind_param("i", $_POST["cID"]);
+		//$stmt -> bind_param("i", $_POST["cID"]);//使用62列hidden欄位所傳的cID
+    $stmt -> bind_param("i", $_GET["id"]);//使用data.php所傳的URL參數的id值
 		$stmt -> execute();
 		$stmt -> close();
 		$db_link -> close();
