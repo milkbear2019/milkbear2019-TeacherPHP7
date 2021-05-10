@@ -21,10 +21,12 @@ session_start();
 //函式：自動產生指定長度的密碼
 function MakePass($length) { 
 	$possible = "0123456789!@#$%^&*()_+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+  //echo "可用的密碼共有 ".strlen($possible)." 個字";
 	$str = ""; 
 	while(strlen($str)<$length){ 
 	  $str .= substr($possible, rand(0, strlen($possible)), 1); 
 	}
+  //echo "<br>新的密碼是:".$str;
 	return($str); 
 }
 //檢查是否經過登入，若有登入則重新導向
