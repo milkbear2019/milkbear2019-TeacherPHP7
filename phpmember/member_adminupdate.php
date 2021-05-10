@@ -41,16 +41,15 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
 	if(($_POST["m_passwd"]!="")&&($_POST["m_passwd"]==$_POST["m_passwdrecheck"])){
 		$mpass = password_hash($_POST["m_passwd"], PASSWORD_DEFAULT);
 	}
-	$stmt->bind_param("ssssssssi", 
-		$mpass,
-		GetSQLValueString($_POST["m_name"], 'string'),
-		GetSQLValueString($_POST["m_sex"], 'string'),		
-		GetSQLValueString($_POST["m_birthday"], 'string'),
-		GetSQLValueString($_POST["m_email"], 'email'),
-		GetSQLValueString($_POST["m_url"], 'url'),
-		GetSQLValueString($_POST["m_phone"], 'string'),
-		GetSQLValueString($_POST["m_address"], 'string'),		
-		GetSQLValueString($_POST["m_id"], 'int'));
+	$stmt->bind_param("ssssssssi", $mpass,$m_name,$m_sex,$m_birthday,$m_email,$m_url,$m_phone,$m_address,$m_address);
+  $m_name = GetSQLValueString($_POST["m_name"], 'string');
+  $m_sex =  GetSQLValueString($_POST["m_sex"], 'string');   
+  $m_birthday =   GetSQLValueString($_POST["m_birthday"], 'string');
+  $m_email =  GetSQLValueString($_POST["m_email"], 'email');
+  $m_url =  GetSQLValueString($_POST["m_url"], 'url');
+  $m_phone =  GetSQLValueString($_POST["m_phone"], 'string');
+  $m_address =  GetSQLValueString($_POST["m_address"], 'string');
+  $m_id =   GetSQLValueString($_POST["m_id"], 'int');
 	$stmt->execute();
 	$stmt->close();
 		//重新導向

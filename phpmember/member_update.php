@@ -47,7 +47,7 @@ if(isset($_POST["action"])&&($_POST["action"]=="update")){
 	$m_url =	GetSQLValueString($_POST["m_url"], 'url');
 	$m_phone =	GetSQLValueString($_POST["m_phone"], 'string');
 	$m_address = 	GetSQLValueString($_POST["m_address"], 'string');
-	$m_address = 	GetSQLValueString($_POST["m_id"], 'int');
+	$m_id = 	GetSQLValueString($_POST["m_id"], 'int');
 	$stmt->execute();
 	$stmt->close();
 	//若有修改密碼，則登出回到首頁。
@@ -65,10 +65,12 @@ $query_RecMember = "SELECT * FROM memberdata WHERE m_username='{$_SESSION["login
 $RecMember = $db_link->query($query_RecMember);	
 $row_RecMember = $RecMember->fetch_assoc();
 ?>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>網站會員系統</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>網站會員系統</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <script language="javascript">
 function checkForm(){
@@ -164,10 +166,10 @@ function checkmail(myEmail) {
             <input name="m_birthday" type="text" class="normalinput" id="m_birthday" value="<?php echo $row_RecMember["m_birthday"];?>">
             <font color="#FF0000">*</font><br><span class="smalltext">為西元格式(YYYY-MM-DD)。</span></p>
             <p><strong>電子郵件</strong>：
-            <input name="m_email" type="text" class="normalinput" id="m_email" value="<?php echo $row_RecMember["m_email"];?>">
+            <input name="m_email" type="email" class="normalinput" id="m_email" value="<?php echo $row_RecMember["m_email"];?>">
             <font color="#FF0000">*</font><br><span class="smalltext">請確定此電子郵件為可使用狀態，以方便未來系統使用，如補寄會員密碼信。</span></p>
             <p><strong>個人網頁</strong>：
-            <input name="m_url" type="text" class="normalinput" id="m_url" value="<?php echo $row_RecMember["m_url"];?>">
+            <input name="m_url" type="url" class="normalinput" id="m_url" value="<?php echo $row_RecMember["m_url"];?>">
             <br><span class="smalltext">請以「http://」 為開頭。</span></p>
             <p><strong>電　　話</strong>：
             <input name="m_phone" type="text" class="normalinput" id="m_phone" value="<?php echo $row_RecMember["m_phone"];?>"></p>
