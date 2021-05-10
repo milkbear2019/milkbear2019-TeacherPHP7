@@ -20,7 +20,9 @@ function GetSQLValueString($theValue, $theType) {
 if(isset($_POST["action"])&&($_POST["action"]=="join")){
 	require_once("connMysql.php");
 	//找尋帳號是否已經註冊
-	$query_RecFindUser = "SELECT m_username FROM memberdata WHERE m_username='{$_POST["m_username"]}'";
+	//$query_RecFindUser = "SELECT m_username FROM memberdata WHERE m_username='{$_POST["m_username"]}'";
+	$m_username = $_POST["m_username"];
+	$query_RecFindUser = "SELECT m_username FROM memberdata WHERE m_username= $m_username";
 	$RecFindUser=$db_link->query($query_RecFindUser);
 	if ($RecFindUser->num_rows>0){
 		header("Location: member_join.php?errMsg=1&username={$_POST["m_username"]}");
