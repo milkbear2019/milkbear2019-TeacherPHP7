@@ -28,16 +28,16 @@ if(isset($_POST["action"])&&($_POST["action"]=="join")){
 	//若沒有執行新增的動作	
 		$query_insert = "INSERT INTO memberdata (m_name, m_username, m_passwd, m_sex, m_birthday, m_email, m_url, m_phone, m_address, m_jointime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
 		$stmt = $db_link->prepare($query_insert);
-		$stmt->bind_param("sssssssss", 
-			GetSQLValueString($_POST["m_name"], 'string'),
-			GetSQLValueString($_POST["m_username"], 'string'),
-			password_hash($_POST["m_passwd"], PASSWORD_DEFAULT),
-			GetSQLValueString($_POST["m_sex"], 'string'),
-			GetSQLValueString($_POST["m_birthday"], 'string'),
-			GetSQLValueString($_POST["m_email"], 'email'),
-			GetSQLValueString($_POST["m_url"], 'url'),
-			GetSQLValueString($_POST["m_phone"], 'string'),
-			GetSQLValueString($_POST["m_address"], 'string'));
+		$stmt->bind_param("sssssssss", $m_name, $m_username, $m_passwd, $m_sex, $m_birthday, $m_email, $m_url,  $m_phone, $m_address);
+		$m_name =	GetSQLValueString($_POST["m_name"], 'string');
+		$m_username =	GetSQLValueString($_POST["m_username"], 'string');
+		$m_passwd = 	password_hash($_POST["m_passwd"], PASSWORD_DEFAULT);
+		$m_sex = 	GetSQLValueString($_POST["m_sex"], 'string');
+		$m_birthday =	GetSQLValueString($_POST["m_birthday"], 'string');
+		$m_email =	GetSQLValueString($_POST["m_email"], 'email');
+		$m_url = 	GetSQLValueString($_POST["m_url"], 'url');
+		$m_phone =	GetSQLValueString($_POST["m_phone"], 'string');
+		$m_address =	GetSQLValueString($_POST["m_address"], 'string');
 		$stmt->execute();
 		$stmt->close();
 		$db_link->close();

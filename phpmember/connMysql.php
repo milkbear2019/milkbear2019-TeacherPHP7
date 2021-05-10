@@ -1,6 +1,6 @@
 <?php
 	//資料庫主機設定
-	$db_host = "localhost";
+	$db_host = "localhost:3308";
 	$db_username = "root";
 	$db_password = "";
 	$db_name = "phpmember";

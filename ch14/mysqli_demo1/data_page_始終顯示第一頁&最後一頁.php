@@ -63,14 +63,16 @@
 		</table>
 		<table border="0" align="center">
 			<tr>
-				<?php if ($num_pages > 1) { // 若不是第一頁則顯示 ?>
 				<td><a href="data_page.php?page=1">第一頁</a></td>
+				<?php if ($num_pages >= 2) { // 若不是第一頁則顯示 ?>
+				<!--<td><a href="data_page.php?page=1">第一頁</a></td>-->
 				<td><a href="data_page.php?page=<?php echo $num_pages-1;?>">上一頁</a></td>
 				<?php } ?>
 				<?php if ($num_pages < $total_pages) { // 若不是最後一頁則顯示 ?>
 				<td><a href="data_page.php?page=<?php echo $num_pages+1;?>">下一頁</a></td>
-				<td><a href="data_page.php?page=<?php echo $total_pages;?>">最後頁</a></td>
+				<!--<td><a href="data_page.php?page=<?php echo $total_pages;?>">最後頁</a></td>-->
 				<?php } ?>
+				<td><a href="data_page.php?page=<?php echo $total_pages;?>">最後頁</a></td>
 			</tr>
 		</table>
 		<table border="0" align="center">
@@ -80,9 +82,9 @@
 					<?php
 					for($i=1;$i<=$total_pages;$i++){
 						if($i==$num_pages){
-							echo $i." ";//目前所在頁數直接顯示數字而不加超連結
+							echo $i." ";
 						}else{
-						echo "<a href=\"data_page.php?page={$i}\">{$i}</a> ";//非目前所在頁數直接顯示數字且須不超連結
+						echo "<a href=\"data_page.php?page={$i}\">{$i}</a> ";
 						}
 					}
 					?>
