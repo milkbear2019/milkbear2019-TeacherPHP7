@@ -46,7 +46,7 @@ if(isset($_POST["m_username"])){
           $mail->IsSMTP(); //設定使用SMTP方式寄信
           $mail->SMTPAuth = true; //啟用SMTP驗證模式
           $mail->Username = "milkbear2019@gmail.com"; //您的 gamil 帳號(可改)
-          $mail->Password = "XXXXX"; //您的 gmail 密碼(可改)
+          $mail->Password = ""; //您的 gmail 密碼(可改)
           $mail->SMTPSecure = "ssl"; // SSL連線 (要使用gmail stmp需要設定ssl模式)
           $mail->Port = 465; //Gamil的SMTP主機的port(Gmail為465)。
           $mail->CharSet = "utf-8"; //郵件編碼
