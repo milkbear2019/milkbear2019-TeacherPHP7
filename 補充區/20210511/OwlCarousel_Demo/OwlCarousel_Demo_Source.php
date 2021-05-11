@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+<?php
+    require_once "connMysql.php"; //載入連線字串;
+    $sql_query = "SELECT * FROM image2";
+    $result = $db_link->query($sql_query); // 執行起來$sql_query中的sql指令
+?>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -20,22 +25,9 @@
         <body>
             <div class="wrapper">
                 <div class="owl-carousel owl-theme">
-                    <div class="item"><img src="img/owl1.jpg"></div>
-                    <div class="item"><img src="img/owl2.jpg"></div>
-                    <div class="item"><img src="img/owl3.jpg"></div>
-                    <div class="item"><img src="img/owl4.jpg"></div>
-                    <div class="item"><img src="img/owl5.jpg"></div>
-                    <div class="item"><img src="img/owl6.jpg"></div>
-                    <div class="item"><img src="img/owl7.jpg"></div>
-                    <div class="item"><img src="img/owl8.jpg"></div>
-                    <div class="item"><img src="img/owl11.jpg"></div>
-                    <div class="item"><img src="img/owl12.jpg"></div>
-                    <div class="item"><img src="img/owl13.jpg"></div>
-                    <div class="item"><img src="img/owl14.jpg"></div>
-                    <div class="item"><img src="img/owl15.jpg"></div>
-                    <div class="item"><img src="img/owl16.jpg"></div>
-                    <div class="item"><img src="img/owl17.jpg"></div>
-                    <div class="item"><img src="img/owl18.jpg"></div>
+                    <?php while ($row_result = $result->fetch_assoc()) {?>
+                    <div class="item"><img src='img/<?php echo $row_result['image_name']; ?>'></div>
+                    <?php }?>
                 </div>
             </div>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -53,7 +45,7 @@
             loop: true,//是否開啟循環播放
             margin: 10,//設定圖與圖之間的邊界
             autoplay: true,//開啟自動播放
-            autoplayTimeout: 1000,//1秒播一次
+            autoplayTimeout: 3000,//1秒播一次
             nav: true, //導航
             navText: ["上一張", "下一張"], // 導航文字
             responsive: {
@@ -64,7 +56,7 @@
             items: 2
             },
             1000: {
-            items: 3
+            items: 1
             }
             }
             })
