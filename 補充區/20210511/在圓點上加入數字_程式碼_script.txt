@@ -1,0 +1,5 @@
+<script>
+$('.owl-dot').each(function(){
+$(this).children('span').text($(this).index()+1);
+});
+</script>

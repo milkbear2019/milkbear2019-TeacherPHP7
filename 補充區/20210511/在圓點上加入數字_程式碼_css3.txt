@@ -1,0 +1,8 @@
+<style>
+    counter-reset: dots;
+}
+	.owl-dot:before {
+    counter-increment:dots;
+    content: counter(dots);
+}
+</style>
