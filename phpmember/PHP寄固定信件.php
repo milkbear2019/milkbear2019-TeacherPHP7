@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>寄固定信件</title>
+    <title>寄固定信件範例</title>
 </head>
     <body>
         <?php
